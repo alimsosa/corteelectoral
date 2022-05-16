@@ -14,7 +14,7 @@
 	<name>corteelectoral</name>
 	<description>proyecto distribuidos corteelectoral</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
