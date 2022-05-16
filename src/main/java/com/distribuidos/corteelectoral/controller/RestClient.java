@@ -17,15 +17,10 @@ public class RestClient {
 
 
     public ResponseEntity<String> callGetVotes(){
-        //org.springframework.http.HttpHeaders headers = new org.springframework.http.HttpHeaders();
         org.springframework.http.HttpHeaders headers = new org.springframework.http.HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
         HttpEntity<String> entity = new HttpEntity<>("parameters",headers);
         ResponseEntity<String> result = restTemplate.exchange(GET_VOTES, HttpMethod.GET,entity,String.class);
         return result;
     }
-
-
-
-
 }
