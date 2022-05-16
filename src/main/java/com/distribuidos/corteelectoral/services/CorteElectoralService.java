@@ -4,14 +4,11 @@ import com.distribuidos.corteelectoral.controller.RestClient;
 import com.distribuidos.corteelectoral.domain.ResultsDTO;
 import lombok.RequiredArgsConstructor;
 import org.json.JSONArray;
-import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 @Service
