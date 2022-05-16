@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class RestClient {
 
-    private static final String GET_VOTES = "http://localhost:8080/getvotos";
+    private static final String GET_VOTES = "http://localhost:8080/getvotes";
 
     static RestTemplate restTemplate = new RestTemplate();
 

@@ -17,9 +17,9 @@ public class VotosController {
 
     private final CorteElectoralService corteElectoralService;
 
-    @GetMapping("/getvotos")
-    public ResponseEntity<List<ResultsDTO>> getVotos() {
-        return corteElectoralService.getVotos();
+    @GetMapping("/getvotes")
+    public ResponseEntity<List<ResultsDTO>> getVotes() {
+        return corteElectoralService.getVotes();
     }
 
 }

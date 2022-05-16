@@ -15,7 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CorteElectoralService {
 
-    public ResponseEntity<List<ResultsDTO>> getVotos() {
+    public ResponseEntity<List<ResultsDTO>> getVotes() {
         RestClient restClient = new RestClient();
         ResponseEntity<String> call = restClient.callGetVotes();
         return countVotes(call.getBody());
