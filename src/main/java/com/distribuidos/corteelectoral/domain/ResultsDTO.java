@@ -10,4 +10,5 @@ import lombok.*;
 public class ResultsDTO {
     private String nombre_partido;
     private Integer cantidadVotos;
+    private String status;
 }

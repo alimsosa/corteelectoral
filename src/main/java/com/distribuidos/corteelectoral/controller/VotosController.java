@@ -5,9 +5,7 @@ import com.distribuidos.corteelectoral.services.CorteElectoralService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,9 +15,8 @@ public class VotosController {
 
     private final CorteElectoralService corteElectoralService;
 
-    @GetMapping("/getvotes")
-    public ResponseEntity<List<ResultsDTO>> getVotes() {
-        return corteElectoralService.getVotes();
+    @GetMapping("api/getvotes/{key}")
+    public ResponseEntity<List<ResultsDTO>> getVotes(@PathVariable(value = "key", required = true) String key) throws Exception {
+        return corteElectoralService.getVotes(key);
     }
-
 }

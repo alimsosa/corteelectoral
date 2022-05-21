@@ -15,12 +15,14 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CorteElectoralService {
 
-    public ResponseEntity<List<ResultsDTO>> getVotes() {
+    public ResponseEntity<List<ResultsDTO>> getVotes(String key) throws Exception {
+        if (!key.equals("909090")){
+           throw new Exception("Key para acceder a los datos incorrecta");
+        }
         RestClient restClient = new RestClient();
         ResponseEntity<String> call = restClient.callGetVotes();
         return countVotes(call.getBody());
     }
-
 
     private ResponseEntity<List<ResultsDTO>> countVotes(String json) {
 
