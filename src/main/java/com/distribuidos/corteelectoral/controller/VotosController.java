@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class VotosController {
 
-    private final CorteElectoralService corteElectoralService;
+    private final CorteElectoralService corteElectoralService = new CorteElectoralService();
 
     @GetMapping("api/getvotes/{key}")
     public ResponseEntity<List<ResultsDTO>> getVotes(@PathVariable(value = "key", required = true) String key) throws Exception {
