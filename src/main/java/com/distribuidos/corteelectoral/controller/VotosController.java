@@ -19,4 +19,5 @@ public class VotosController {
     public ResponseEntity<List<ResultsDTO>> getVotes(@PathVariable(value = "key", required = true) String key) throws Exception {
         return corteElectoralService.getVotes(key);
     }
+
 }

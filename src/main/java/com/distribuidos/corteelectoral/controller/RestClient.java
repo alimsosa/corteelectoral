@@ -11,12 +11,13 @@ import java.util.Arrays;
 
 public class RestClient {
 
-    private static final String GET_VOTES = "http://localhost:8080/getvotes";
+    private static String GET_VOTES = "http://localhost:8080/getvotes/";
 
     static RestTemplate restTemplate = new RestTemplate();
 
 
-    public ResponseEntity<String> callGetVotes(){
+    public ResponseEntity<String> callGetVotes(String key){
+        GET_VOTES = GET_VOTES + key;
         org.springframework.http.HttpHeaders headers = new org.springframework.http.HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
         HttpEntity<String> entity = new HttpEntity<>("parameters",headers);
