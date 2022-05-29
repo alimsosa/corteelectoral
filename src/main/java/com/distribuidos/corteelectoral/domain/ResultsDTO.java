@@ -17,6 +17,4 @@ public class ResultsDTO {
     private String nombre_partido;
     @Column(name="cantidad_votos")
     private Integer cantidadVotos;
-    @Column(name="fecha")
-    private Date fecha;
 }

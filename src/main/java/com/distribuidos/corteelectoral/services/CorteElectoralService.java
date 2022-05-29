@@ -19,9 +19,9 @@ public class CorteElectoralService {
     @Autowired
     IResultsRepository resultsRepository;
 
-    public ResponseEntity<List<ResultsDTO>> getVotes(String key) throws Exception {
+    public ResponseEntity<List<ResultsDTO>> getVotes() throws Exception {
         RestClient restClient = new RestClient();
-        ResponseEntity<String> call = restClient.callGetVotes(key);
+        ResponseEntity<String> call = restClient.callGetVotes();
         return countVotes(call.getBody());
     }
 
@@ -30,6 +30,8 @@ public class CorteElectoralService {
         JSONArray jsonArray = new JSONArray(json);
         List<ResultsDTO> resultados = new ArrayList<>();
         boolean flagVotoSumando = false;
+
+        Object nombrepart = jsonArray.getJSONObject(0).get("nombre_partido");
 
         for (int i = 0; i < jsonArray.length(); i++) {
             for (ResultsDTO r : resultados) {
