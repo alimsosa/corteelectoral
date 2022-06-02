@@ -3,8 +3,6 @@ package com.distribuidos.corteelectoral.controller;
 import com.distribuidos.corteelectoral.domain.ResultsDTO;
 import com.distribuidos.corteelectoral.services.CorteElectoralService;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
