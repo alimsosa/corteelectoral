@@ -1,0 +1,6 @@
+
+*.properties
+*.xml
+.idea/runConfigurations.xml
+*.xml
+.idea/uiDesigner.xml

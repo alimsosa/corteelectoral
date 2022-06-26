@@ -11,10 +11,11 @@ import java.util.Date;
 @Table(name = "resultsdb")
 public class ResultsDTO {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+    private String partido_Lista;
     @Column(name= "partido")
     private String nombre_partido;
+    @Column(name = "lista")
+    private String nombre_lista;
     @Column(name="cantidad_votos")
     private Integer cantidadVotos;
 }

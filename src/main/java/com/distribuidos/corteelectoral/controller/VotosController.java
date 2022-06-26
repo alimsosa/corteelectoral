@@ -14,8 +14,10 @@ public class VotosController {
 
     private CorteElectoralService corteElectoralService;
     @GetMapping("api/getvotes")
-    public ResponseEntity<List<ResultsDTO>> getVotes() throws Exception {
-        return corteElectoralService.getVotes();
+    public ResponseEntity<List<ResultsDTO>> getVotes(@RequestParam String stringPass1, @RequestParam String stringPass2, @RequestParam String stringPass3) throws Exception {
+
+
+        return corteElectoralService.getVotes(stringPass1, stringPass2, stringPass3);
     }
 
 }
